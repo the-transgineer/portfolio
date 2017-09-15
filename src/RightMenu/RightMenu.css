@@ -8,6 +8,25 @@
     display: none;
 }
 
+.RightMenu ul{
+    border: 1px solid #555555;
+    text-align: center;
+}
+
+.RightMenu li{
+    border-bottom: 1px solid #555555;
+    padding: 2px;
+    word-wrap: normal;
+}
+
+.RightMenu li:last-child{
+    border-bottom: none;
+}
+
 .RightMenu li:hover{
-    color: red;
+    background-color: #001CA2;
+}
+
+.RightMenu .colorPicker:hover{
+
 }

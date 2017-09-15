@@ -1,6 +1,7 @@
 import React from 'react';
 import './Desktop.css';
 import {RightMenu} from "../RightMenu/RightMenu";
+import {Window} from "../Window/Window";
 
 export class Desktop extends React.Component{
     constructor(props){
@@ -49,6 +50,7 @@ export class Desktop extends React.Component{
         };
         return(
             <div onContextMenu={this.showMenu} onClick={this.handleClick} style={style} className="Desktop">
+                <Window instance={{title: 'hi', content:'content'}}/>
                 <RightMenu changeColor={this.childHandleClick} visible={this.state.displayMenu} style={menuStyle} />
             </div>
         );

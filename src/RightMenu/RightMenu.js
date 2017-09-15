@@ -2,19 +2,23 @@ import React from 'react';
 import './RightMenu.css'
 
 export class RightMenu extends React.Component{
+
+    shutDown(){
+
+    }
     render(){
         let classes = ["RightMenu"];
 
         let ulStyle = {
+          border: 'solid 1px black',
           listStyleType: 'none',
           margin: '0',
           padding: '0',
-          width: '150px',
+          width: '160px',
         };
 
         let liStyle = {
-            display: 'block',
-            padding: '100px, 16px'
+            display: 'block'
         };
 
         if(!this.props.visible){
@@ -26,7 +30,7 @@ export class RightMenu extends React.Component{
               <ul style={ulStyle}className={classes[1]}>
                   <li onClick={this.props.changeColor} style={liStyle}>Change Desktop Color</li>
                   <li style={liStyle}>File Browser</li>
-                  <li style={liStyle}>Shut down</li>
+                  <li onClick={this.shutDown} style={liStyle}>Shut down</li>
               </ul>
           </div>
         );
