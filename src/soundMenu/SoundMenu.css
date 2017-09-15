@@ -1,0 +1,11 @@
+.SoundMenu{
+    height: 100px;
+    width: 40px;
+    background-color: #BFBFBF;
+    position: relative;
+    bottom: 750%;
+}
+
+.hide{
+    display: none;
+}

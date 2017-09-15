@@ -1,0 +1,13 @@
+.RightMenu{
+    background-color: #BFBFBF;
+    position: absolute;
+    z-index: 20000;
+}
+
+.hideRM{
+    display: none;
+}
+
+.RightMenu li:hover{
+    color: red;
+}

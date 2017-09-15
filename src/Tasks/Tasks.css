@@ -1,0 +1,11 @@
+.Tasks{
+    position: absolute;
+    right: 1%;
+    max-height: 75%;
+    padding-bottom: 1px;
+    margin-top: .5%;
+    box-shadow: inset 1px 1px 3px #999;
+    z-index: 100;
+    display: inline-flex;
+
+}

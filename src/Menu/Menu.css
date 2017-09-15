@@ -1,0 +1,21 @@
+.Menu {
+    text-align: center;
+    width : 8%;
+    position: absolute;
+    bottom: 15%;
+    left: .25%;
+    border: solid 1px black;
+    padding: 8px;
+    box-shadow: 2px 2px 2px 2px black;
+    background: url("./windows.png");
+    background-repeat:no-repeat ;
+}
+
+.Menu:active{
+    box-shadow: 1px 1px 1px 1px black
+}
+
+
+img{
+    margin-right: 15px ;
+}
