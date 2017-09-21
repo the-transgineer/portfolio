@@ -14,7 +14,8 @@ export class Desktop extends React.Component{
             displayMenu     : false,
             displayMenuX    : 0,
             displayMenuY    : 0,
-            displayMenuContent: ['test', 'test']
+            displayMenuContent: ['test', 'test'],
+            displayMenuInfo : ''
         }
     }
 
@@ -23,7 +24,8 @@ export class Desktop extends React.Component{
         switch (id){
             case 'IconTitle':
                 this.setState({
-                    displayMenuContent:['Open', 'Rename', 'Delete']
+                    displayMenuContent:['Open', 'Rename', 'Delete'],
+                    displayMenuInfo: e.target.textContent
                 });
                 break;
             default:
@@ -60,7 +62,6 @@ export class Desktop extends React.Component{
             left: this.state.displayMenuX,
             top: this.state.displayMenuY
         };
-
         return(
             <div onContextMenu={this.showMenu} onClick={this.handleClick} style={style} className="Desktop">
                 <Icons controller={this.props.controller}/>
@@ -71,7 +72,7 @@ export class Desktop extends React.Component{
                         </Window>
                     }
                 })}
-                <RightMenu content={this.state.displayMenuContent} changeColor={this.childHandleClick} visible={this.state.displayMenu} style={menuStyle} />
+                <RightMenu content={this.state.displayMenuContent} controller={this.props.controller} info={this.state.displayMenuInfo} changeColor={this.childHandleClick} visible={this.state.displayMenu} style={menuStyle} />
             </div>
         );
     }
