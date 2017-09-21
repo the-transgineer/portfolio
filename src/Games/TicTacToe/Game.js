@@ -8,8 +8,7 @@ export class Game extends React.Component {
         this.state = {
             visible: true
 
-        }
-        console.log(this.props.controller);
+        };
     };
 
 

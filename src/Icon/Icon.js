@@ -7,6 +7,7 @@ export class Icon extends React.Component{
     handleClick = () =>{
         if(!this.props.controller.getOne(this.props.name).visible){
             this.props.controller.toggleVisible(this.props.name);
+            this.props.controller.toggleMax(this.props.name);
             this.props.controller.getOne('Tic Tac Toe').content = <Game controller={this.props.controller}/>
         }
     };

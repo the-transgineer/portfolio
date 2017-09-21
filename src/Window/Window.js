@@ -7,18 +7,19 @@ export class Window extends React.Component{
         super(props);
 
         this.state = {
-            visible  : this.props.controller.getOne(this.props.name).visible,
             maximised: false,
             position: '25%'
         };
 
     }
 
+    minimize = () => {
+        this.props.controller.toggleMax(this.props.name);
+    };
+
     close = () => {
-        this.setState({
-           visible: !this.state.visible
-        });
         this.props.controller.toggleVisible(this.props.name);
+        this.props.controller.toggleMax(this.props.name);
     };
 
     changeSize = () => {
@@ -32,13 +33,14 @@ export class Window extends React.Component{
 
 
     render(){
+        let Program = this.props.controller.getOne(this.props.name);
         let size = this.state.maximised ? '900px' : '400px';
         let windowStyle = {
             width: size,
             height: size,
             left: this.state.position,
             top: this.state.position,
-            display: this.state.visible ? 'block' : 'none'
+            display: Program.maximised ? 'block' : 'none'
         };
 
         let image = {
@@ -52,7 +54,7 @@ export class Window extends React.Component{
                     <div style={image} className="windowIcon"> </div>
                     <div className="Title">{this.props.name}</div>
                     <div className="ActionButtons">
-                        <div className="barButton" id="M">_</div>
+                        <div onClick={this.minimize} className="barButton" id="M">_</div>
                         <div onClick={this.changeSize} className="barButton"id="FS">□</div>
                         <div onClick={this.close} className="barButton" id="X">⨯</div>
                     </div>

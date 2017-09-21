@@ -23,4 +23,8 @@ export class Controller {
         this.getOne(name).visible = !(this.getOne(name).visible);
     }
 
+    toggleMax(name){
+        this.getOne(name).maximised = !this.getOne(name).maximised;
+    }
+
 }
