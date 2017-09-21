@@ -30,4 +30,12 @@ export class Controller {
     rename(name, newName){
         this.getOne(name).name = newName;
     }
+
+    delete(name){
+        for(let x = 0; x < Programs.length; x++){
+            if(Programs[x].name === name){
+                this.Programs[x] = {};
+            }
+        }
+    }
 }
