@@ -4,8 +4,6 @@ import {RightMenu} from "../RightMenu/RightMenu";
 import {Window} from "../Window/Window";
 import {Icons} from "../Icons/Icons";
 import {Game} from "../Games/TicTacToe/Game";
-import {Controller} from "../Controller/Contoroller";
-
 
 export class Desktop extends React.Component{
     constructor(props){
@@ -65,8 +63,14 @@ export class Desktop extends React.Component{
 
         return(
             <div onContextMenu={this.showMenu} onClick={this.handleClick} style={style} className="Desktop">
-                <Icons/>
-                <Window visible={false} instance={{type: 'folder-open',title: 'Tic Tac Toe'}}>{<Game />}</Window>
+                <Icons controller={this.props.controller}/>
+                {this.props.controller.getAll().map((item,index) => {
+                    if(item.visible){
+                        return <Window key={index} name={item.name} controller={this.props.controller}>
+                            {item.content}
+                        </Window>
+                    }
+                })}
                 <RightMenu content={this.state.displayMenuContent} changeColor={this.childHandleClick} visible={this.state.displayMenu} style={menuStyle} />
             </div>
         );

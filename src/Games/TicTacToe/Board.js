@@ -44,6 +44,10 @@ export class Board extends React.Component{
         })
     };
 
+    close = () => {
+        this.props.controller.toggleVisible('Tic Tac Toe')
+    };
+
     handleClick = (i) => {
        let subSquares = this.state.squares;
         if(calculateWinner(subSquares) || subSquares[i]){
@@ -108,7 +112,7 @@ export class Board extends React.Component{
                     <h3>Would You like to play again?</h3>
                     <div style={{display: 'inline-flex'}}>
                         <div onClick={ this.reset } style={buttonStyle}>Yes</div>
-                        <div style={buttonStyle}>No</div>
+                        <div onClick={ this.close } style={buttonStyle}>No</div>
                     </div>
                 </PopUp>
             </div>

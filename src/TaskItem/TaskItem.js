@@ -11,12 +11,13 @@ export class TaskItem extends React.Component{
     }*/
 
     render(){
+        const Program = this.props.controller.getOne(this.props.name);
         const itemStyle = {
-            backgroundImage: 'url(/Icons/computer.ico)'
+            backgroundImage: `url(/Icons/${Program.image}.ico)`
         };
         return(
             <div style={itemStyle} className="TaskItem">
-                <p>{this.props.name}</p>
+                <p>{Program.name}</p>
             </div>
         );
     }

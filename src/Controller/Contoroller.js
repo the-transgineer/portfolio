@@ -1,5 +1,6 @@
 import {Programs} from './Objects';
 
+
 export class Controller {
     constructor(){
         this.Programs = Programs;
@@ -14,8 +15,12 @@ export class Controller {
             if(this.Programs[i].name === name){
                 return this.Programs[i];
             }
-            return 'Not Found';
         }
+        return 'Not Found';
+    }
+
+    toggleVisible(name){
+        this.getOne(name).visible = !(this.getOne(name).visible);
     }
 
 }

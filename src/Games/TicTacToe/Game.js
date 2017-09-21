@@ -9,6 +9,7 @@ export class Game extends React.Component {
             visible: true
 
         }
+        console.log(this.props.controller);
     };
 
 
@@ -17,7 +18,7 @@ export class Game extends React.Component {
         return (
             <div className="game">
                 <div className="game-board">
-                    <Board />
+                    <Board controller={this.props.controller} />
                 </div>
                 <div className="game-info">
                     <div>{/* status */}</div>

@@ -11,12 +11,13 @@
     margin: 2px;
     border: solid 1px black;
     width: 100px;
-    background-size: 30%;
-    max-width: 100px;
+    background-size: 22%;
+    max-width: 150px;
     background-position: 5%;
     background-repeat: no-repeat;
     flex-grow: 1;
     box-shadow: 3px 3px 3px black;
+    overflow: hidden;
 }
 
 .TaskItem:active{

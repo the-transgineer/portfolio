@@ -7,7 +7,7 @@ export class Window extends React.Component{
         super(props);
 
         this.state = {
-            visible  : this.props.visible,
+            visible  : this.props.controller.getOne(this.props.name).visible,
             maximised: false,
             position: '25%'
         };
@@ -18,6 +18,7 @@ export class Window extends React.Component{
         this.setState({
            visible: !this.state.visible
         });
+        this.props.controller.toggleVisible(this.props.name);
     };
 
     changeSize = () => {
@@ -41,7 +42,7 @@ export class Window extends React.Component{
         };
 
         let image = {
-            backgroundImage: `url(/Icons/${this.props.instance.type}.ico)`
+            backgroundImage: `url(/Icons/${this.props.controller.getOne(this.props.name).image}.ico)`
         };
 
         const classes = ['Window'];
@@ -49,7 +50,7 @@ export class Window extends React.Component{
             <div style={windowStyle} className={classes}>
                 <div className="TopBar">
                     <div style={image} className="windowIcon"> </div>
-                    <div className="Title">{this.props.instance.title}</div>
+                    <div className="Title">{this.props.name}</div>
                     <div className="ActionButtons">
                         <div className="barButton" id="M">_</div>
                         <div onClick={this.changeSize} className="barButton"id="FS">□</div>

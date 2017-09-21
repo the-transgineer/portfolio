@@ -17,14 +17,14 @@ class Monitor extends Component {
         this.setState({
             rightMenu: false,
             startMenu: false
-        })
+        });
     };
 
     render() {
         return (
             <div onClick={this.handleClick} className="Monitor">
-             <Desktop rightMenuVisible={this.state.rightMenu}/>
-             <Taskbar startMenuVisible={this.state.startMenu}/>
+             <Desktop controller={this.props.controller} rightMenuVisible={this.state.rightMenu}/>
+             <Taskbar controller={this.props.controller} startMenuVisible={this.state.startMenu}/>
             </div>
         );
     }
