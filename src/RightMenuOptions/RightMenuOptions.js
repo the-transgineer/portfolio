@@ -8,9 +8,13 @@ export class RightMenuOptions extends React.Component{
         console.log(input);
         switch(input){
             case 'Open':{
-                console.log(this.props);
                 this.props.controller.toggleVisible(this.props.name);
                 this.props.controller.toggleMax(this.props.name);
+                break;
+            }
+
+            case 'Delete':{
+                this.props.controller.delete(this.props.name);
                 break;
             }
         }
