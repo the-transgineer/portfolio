@@ -1,0 +1,36 @@
+.TaskItemList{
+    position: absolute;
+    width: 700px;
+    left: 100px;
+    height: 95%;
+    top: 1px;
+    display: inline-flex;
+}
+
+.TaskItem{
+    margin: 2px;
+    border: solid 1px black;
+    width: 100px;
+    background-size: 30%;
+    max-width: 100px;
+    background-position: 5%;
+    background-repeat: no-repeat;
+    flex-grow: 1;
+    box-shadow: 3px 3px 3px black;
+}
+
+.TaskItem:active{
+    box-shadow: inset 1px 1px 1px black;
+}
+
+.TaskItemMax{
+    box-shadow: inset 1px 1px 1px black;
+    background-color: #999999;
+}
+
+.TaskItem P {
+    position: relative;
+    left: 40%;
+    bottom: 25%;
+    font-size: 20px;
+}

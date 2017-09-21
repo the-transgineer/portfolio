@@ -1,11 +1,11 @@
 import React from 'react';
-import './RightMenu.css'
+import './RightMenu.css';
+import {RightMenuOptions} from "../RightMenuOptions/RightMenuOptions";
+
 
 export class RightMenu extends React.Component{
 
-    shutDown(){
 
-    }
     render(){
         let classes = ["RightMenu"];
 
@@ -17,20 +17,17 @@ export class RightMenu extends React.Component{
           width: '160px',
         };
 
-        let liStyle = {
-            display: 'block'
-        };
+
 
         if(!this.props.visible){
             classes.push('hideRM');
         }
 
+
         return (
           <div style={this.props.style} className={classes}>
-              <ul style={ulStyle}className={classes[1]}>
-                  <li onClick={this.props.changeColor} style={liStyle}>Change Desktop Color</li>
-                  <li style={liStyle}>File Browser</li>
-                  <li onClick={this.shutDown} style={liStyle}>Shut down</li>
+              <ul style={ulStyle} className={classes[1]}>
+                  {this.props.content.map( item =>  <RightMenuOptions title={item}/>)}
               </ul>
           </div>
         );

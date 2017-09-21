@@ -4,11 +4,27 @@ import {Taskbar} from "../Taskbar/Taskbar";
 import {Desktop} from "../Desktop/Desktop";
 
 class Monitor extends Component {
+    constructor(props){
+        super(props);
+
+        this.state = {
+            rightMenu: false,
+            startMenu: false
+        }
+    }
+
+    handleClick = () =>{
+        this.setState({
+            rightMenu: false,
+            startMenu: false
+        })
+    };
+
     render() {
         return (
-            <div className="Monitor">
-             <Desktop/>
-             <Taskbar/>
+            <div onClick={this.handleClick} className="Monitor">
+             <Desktop rightMenuVisible={this.state.rightMenu}/>
+             <Taskbar startMenuVisible={this.state.startMenu}/>
             </div>
         );
     }

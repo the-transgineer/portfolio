@@ -1,0 +1,24 @@
+.game{
+    width: 100%;
+    background-color: antiquewhite;
+    height: 360px;
+    position: absolute;
+}
+
+.game-board{
+    width: 100%;
+    margin-left: auto;
+    position: absolute;
+}
+
+.board-row{
+    width: 100%;
+    margin-left: auto;
+    position: relative;
+}
+
+button{
+    width: 33.333%;
+    height: 50px;
+}
+

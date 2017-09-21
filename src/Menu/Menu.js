@@ -7,8 +7,7 @@ export class Menu extends Component{
         super(props);
 
         this.state = {
-            visible : false,
-            press   : false
+            visible : false
         };
 
     }

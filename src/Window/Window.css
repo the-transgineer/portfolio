@@ -2,6 +2,8 @@
     position: absolute;
     z-index: 200;
     background-color: aliceblue;
+    border: solid 3px #BFBFBF;
+    border-bottom: 20px solid #BFBFBF;
 }
 
 .TopBar {
@@ -9,17 +11,51 @@
     display: inline-flex;
     width: 100%;
     background-color: #001CA2;
+    color: white;
+    height: 20px;
 }
 
 .ActionButtons{
     display: inline-flex;
     position: absolute;
-    right: 0;
+    right: 2px;
+    top: 1px;
+    color: black;
 }
 
 .barButton{
     height: 16px;
     width: 16px;
-    background-color: #999999;
+    background-color: #BFBFBF;
     margin: 1px;
+    text-align: center;
 }
+
+.windowIcon {
+    height: 16px;
+    width: 16px;
+    /*background-image: url('../Icons/folder-open2.ico');*/
+    background-position: center;
+    background-size: contain;
+    margin-right: 5px;
+    margin-left: 3px;
+    margin-top: 1px;
+}
+
+.toolBar {
+    border-top: 1px solid #BFBFBF;
+    background-color: #BFBFBF;
+    height: 20px;
+    display: inline-flex;
+    width: 100%;
+}
+
+.Tool {
+    padding-right: 7px;
+    padding-left: 3px;
+}
+
+.Tool:hover{
+    background-color: #555555;
+}
+

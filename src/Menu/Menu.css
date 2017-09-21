@@ -9,6 +9,7 @@
     box-shadow: 2px 2px 2px 2px black;
     background: url("./windows.png");
     background-repeat:no-repeat ;
+    z-index: 0;
 }
 
 .Menu:active{

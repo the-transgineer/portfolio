@@ -1,0 +1,14 @@
+.Icon{
+    height: 64px;
+    width: 64px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    color: white;
+    list-style-type: none;
+    margin-bottom: 32px;
+}
+
+.Icon p{
+    padding-top: 64px;
+}

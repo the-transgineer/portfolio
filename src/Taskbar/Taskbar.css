@@ -4,5 +4,7 @@
     width: 100%;
     bottom: 0;
     background-color: #BFBFBF;
+    display: inline-flex;
+    flex-wrap: nowrap;
 
 }

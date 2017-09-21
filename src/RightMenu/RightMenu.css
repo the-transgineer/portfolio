@@ -13,20 +13,17 @@
     text-align: center;
 }
 
-.RightMenu li{
+.RightMenu .RightMenuOptions{
     border-bottom: 1px solid #555555;
     padding: 2px;
     word-wrap: normal;
 }
 
-.RightMenu li:last-child{
+.RightMenu .RightMenuOptions:last-child{
     border-bottom: none;
 }
 
-.RightMenu li:hover{
+.RightMenu .RightMenuOptions:hover{
     background-color: #001CA2;
-}
-
-.RightMenu .colorPicker:hover{
-
+    color: white;
 }

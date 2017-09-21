@@ -12,7 +12,6 @@ export class Start extends React.Component{
         let startClasses = ["Start"];
 
         if(!this.props.visible){
-            console.log(this.props.visible);
             startClasses.push("Start-Hidden")
         }
 
