@@ -8,14 +8,16 @@ export class Icon extends React.Component{
         if(!this.props.controller.getOne(this.props.name).visible){
             this.props.controller.toggleVisible(this.props.name);
             this.props.controller.toggleMax(this.props.name);
-            this.props.controller.getOne('Tic Tac Toe').content = <Game controller={this.props.controller}/>
+            return null;
         }
+
     };
 
     render(){
         const program = this.props.controller.getOne(this.props.name);
         const style = {
-            backgroundImage: `url(/Icons/${program.image}.ico`
+            backgroundImage: `url(/Icons/${program.image}.ico`,
+            color: this.props.color ? this.props.color : 'white'
         };
 
 

@@ -1,7 +1,6 @@
 .Window{
     position: absolute;
     z-index: 200;
-    background-color: aliceblue;
     border: solid 3px #BFBFBF;
     border-bottom: 20px solid #BFBFBF;
 }

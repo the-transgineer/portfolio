@@ -3,14 +3,15 @@ import './Desktop.css';
 import {RightMenu} from "../RightMenu/RightMenu";
 import {Window} from "../Window/Window";
 import {Icons} from "../Icons/Icons";
-import {Game} from "../Games/TicTacToe/Game";
+import {Icon} from "../Icon/Icon";
+import {PopUp} from "../Popup/PopUp";
 
 export class Desktop extends React.Component{
     constructor(props){
         super(props);
 
         this.state = {
-            backgroundColor : '#008483',
+            backgroundColor : this.props.controller.DesktopBackground,
             displayMenu     : false,
             displayMenuX    : 0,
             displayMenuY    : 0,
@@ -30,14 +31,14 @@ export class Desktop extends React.Component{
                 break;
             default:
                 this.setState({
-                    displayMenuContent:['Change Background Color']
+                    displayMenuContent:['Change Color', 'Add New']
                 })
         }
         e.preventDefault();
         this.setState({
             displayMenu: true,
-            displayMenuX: `${e.clientX - 500 }px`,
-            displayMenuY: `${e.clientY - 10}px`
+            displayMenuX: `${e.clientX - 510 }px`,
+            displayMenuY: `${e.clientY - 50}px`
         });
     };
 
@@ -64,13 +65,25 @@ export class Desktop extends React.Component{
         };
         return(
             <div onContextMenu={this.showMenu} onClick={this.handleClick} style={style} className="Desktop">
-                <Icons controller={this.props.controller}/>
+                <Icons controller={this.props.controller}>
+                    {this.props.controller.getAll().map( (i, j) => {
+                        if(i.desktop) {
+                            return <Icon controller={this.props.controller} key={j} name={i.name}/>
+                        }
+                    })}
+                </Icons>
                 {this.props.controller.getAll().map((item,index) => {
                     if(item.visible){
                         return <Window key={index} name={item.name} controller={this.props.controller}>
                             {item.content}
                         </Window>
                     }
+                })}
+
+                {this.props.controller.Popups.map((item, index) => {
+                    return <PopUp key={index} name={item.name} controller={this.props.controller}>
+                        {item.content}
+                    </PopUp>
                 })}
                 <RightMenu content={this.state.displayMenuContent} controller={this.props.controller} info={this.state.displayMenuInfo} changeColor={this.childHandleClick} visible={this.state.displayMenu} style={menuStyle} />
             </div>

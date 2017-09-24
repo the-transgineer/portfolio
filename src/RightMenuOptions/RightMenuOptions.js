@@ -13,9 +13,19 @@ export class RightMenuOptions extends React.Component{
                 break;
             }
 
+            case 'Rename':{
+                this.props.controller.rename(this.props.name, 'NewName');
+                break;
+            }
+
             case 'Delete':{
                 this.props.controller.delete(this.props.name);
                 break;
+            }
+
+            default: {
+                this.props.controller.toggleVisible(input);
+                this.props.controller.toggleMax(input);
             }
         }
     };

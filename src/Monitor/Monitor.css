@@ -5,6 +5,7 @@
     margin-right: auto;
     left: 0;
     right: 0;
+    top: 5%;
     -webkit-font-smoothing : none;
     cursor: url('./cursor.cur'), auto;
     position: absolute;

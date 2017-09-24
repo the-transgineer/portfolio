@@ -1,23 +1,14 @@
 import React from 'react';
-import {Game} from "../Games/TicTacToe/Game";
 
 export const Programs = [
+
     {
-        name: 'computer',
+        name: 'My Computer',
         image: 'computer',
         desktop: true,
         visible: false,
         minimized: false,
-        content: 'Hello World'
-    },
-
-    {
-        name: 'my computer',
-        image: 'computer',
-        desktop: false,
-        visible: false,
-        minimized: false,
-        content: '<div>Hello World</div>'
+        content: <h1>Hello World</h1>
     },
 
 
@@ -27,6 +18,26 @@ export const Programs = [
         desktop: true,
         visible: false,
         minimized: false,
-        content: <Game />
+        content: ''
+    },
+
+    {
+        name: 'Change Color',
+        image: 'file_eye',
+        desktop: false,
+        visible: false,
+        minimized: false,
+        parent: 'Portfolio',
+        content: ''
+    },
+
+    {
+        name: 'Portfolio',
+        image: 'folder-open',
+        desktop: true,
+        visible: false,
+        minimized: false,
+        fileBrowser: true,
+        parent: 'none'
     }
 ];

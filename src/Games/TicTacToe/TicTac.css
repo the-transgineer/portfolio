@@ -3,6 +3,7 @@
     background-color: antiquewhite;
     height: 360px;
     position: absolute;
+    cursor: url("../../Monitor/cursor.cur"),auto;
 }
 
 .game-board{
@@ -20,5 +21,6 @@
 button{
     width: 33.333%;
     height: 50px;
+    cursor: url("../../Monitor/cursor.cur"),auto;
 }
 

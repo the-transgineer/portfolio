@@ -1,9 +1,12 @@
 import {Programs} from './Objects';
+import {PopUp} from "../Popup/PopUp";
 
 
 export class Controller {
     constructor() {
         this.Programs = Programs;
+        this.Popups = [];
+        this.DesktopBackground = '#008483';
     }
 
     getAll() {
@@ -29,13 +32,19 @@ export class Controller {
 
     rename(name, newName){
         this.getOne(name).name = newName;
+        console.log(this.Programs);
     }
 
     delete(name){
         for(let x = 0; x < Programs.length; x++){
             if(Programs[x].name === name){
-                this.Programs[x] = {};
+                this.Programs = this.Programs.slice(0,x).concat(this.Programs.slice(x+1));
+                return;
             }
         }
+    }
+
+    addPop(name,content){
+        PopUp.push({name: name, content: content})
     }
 }

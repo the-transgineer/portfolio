@@ -1,9 +1,23 @@
 import React from 'react';
 
 export class PopUp extends React.Component{
+    constructor(props){
+        super(props);
+
+        this.state = {
+            visible: this.props.visible
+        }
+    }
+
+    close = () => {
+        this.setState({
+            visible: false
+        })
+    };
+
     render(){
         const popUpStyle = {
-            display: this.props.visible ? 'block' : 'none',
+            display: this.state.visible ? 'block' : 'none',
             height: '100px',
             width: '300px',
             backgroundColor: '#BFBFBF',

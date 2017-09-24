@@ -19,6 +19,7 @@ export class Window extends React.Component{
 
     close = () => {
         this.props.controller.toggleVisible(this.props.name);
+          
         this.props.controller.toggleMax(this.props.name);
     };
 
@@ -40,7 +41,8 @@ export class Window extends React.Component{
             height: size,
             left: this.state.position,
             top: this.state.position,
-            display: Program.maximised ? 'block' : 'none'
+            display: Program.maximised ? 'block' : 'none',
+            backgroundColor: !this.props.controller.getOne(this.props.name).fileBrowser ? '#BEBEBE' : 'aliceblue'
         };
 
         let image = {
