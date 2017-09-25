@@ -1,5 +1,5 @@
 import {Programs} from './Objects';
-import {PopUp} from "../Popup/PopUp";
+import React from 'react';
 
 
 export class Controller {
@@ -7,6 +7,7 @@ export class Controller {
         this.Programs = Programs;
         this.Popups = [];
         this.DesktopBackground = '#008483';
+        console.log(this.Popups);
     }
 
     getAll() {
@@ -19,7 +20,7 @@ export class Controller {
                 return this.Programs[i];
             }
         }
-        return 'Not Found';
+        return false;
     }
 
     toggleVisible(name) {
@@ -31,8 +32,12 @@ export class Controller {
     }
 
     rename(name, newName){
-        this.getOne(name).name = newName;
-        console.log(this.Programs);
+        if(this.getOne(newName)){
+            this.addPop('Error', <p style={{marginTop: '10px'}}> Name Already Exists</p>);
+        }
+        else{
+            this.getOne(name).name = newName;
+        }
     }
 
     delete(name){
@@ -44,7 +49,7 @@ export class Controller {
         }
     }
 
-    addPop(name,content){
-        PopUp.push({name: name, content: content})
+    addPop(name,content, visible=false){
+        this.Popups.push({name: name, content: content, visible: visible})
     }
 }

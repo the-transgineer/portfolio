@@ -45,7 +45,9 @@ export class Board extends React.Component{
     };
 
     close = () => {
-        this.props.controller.toggleVisible('Tic Tac Toe')
+        this.props.controller.toggleVisible('Tic Tac Toe');
+        this.props.controller.toggleMax('Tic Tac Toe');
+        this.props.controller.Popups = [];
     };
 
     handleClick = (i) => {
@@ -69,7 +71,7 @@ export class Board extends React.Component{
     render() {
         let status = `Next player: ${this.state.xTurn ? 'X' : 'O'}`;
         const winner = calculateWinner(this.state.squares);
-        let popUp = false;
+
 
         const buttonStyle = {
             width: '40px',
@@ -86,7 +88,7 @@ export class Board extends React.Component{
 
         if(winner){
             status = `Winner: ${winner}`;
-            popUp = true;
+            this.props.controller.addPop('Play Again',<div><h3>Would You like to play again?</h3><div style={{display: 'inline-flex'}}><div onClick={ this.reset } style={buttonStyle}>Yes</div><div onClick={ this.close } style={buttonStyle}>No</div></div></div>, true)
         }
 
         return (
@@ -108,13 +110,6 @@ export class Board extends React.Component{
                     {this.renderSquare(8)}
                 </div>
 
-                <PopUp visible={popUp} instance={{title: 'Play Again'}}>
-                    <h3>Would You like to play again?</h3>
-                    <div style={{display: 'inline-flex'}}>
-                        <div onClick={ this.reset } style={buttonStyle}>Yes</div>
-                        <div onClick={ this.close } style={buttonStyle}>No</div>
-                    </div>
-                </PopUp>
             </div>
         );
     }

@@ -38,7 +38,7 @@ export class Window extends React.Component{
         let size = this.state.maximised ? '900px' : '400px';
         let windowStyle = {
             width: size,
-            height: size,
+            height: this.state.maximised ? '92.5%' : '400px',
             left: this.state.position,
             top: this.state.position,
             display: Program.maximised ? 'block' : 'none',
@@ -50,6 +50,7 @@ export class Window extends React.Component{
         };
 
         const classes = ['Window'];
+        console.log('rendered');
         return (
             <div style={windowStyle} className={classes}>
                 <div className="TopBar">

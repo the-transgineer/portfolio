@@ -20,6 +20,7 @@ export class Icon extends React.Component{
             color: this.props.color ? this.props.color : 'white'
         };
 
+        console.log(program);
 
         return (
             <li onClick={this.handleClick} className="Icon" style={style}>

@@ -11,6 +11,7 @@ export class  FileBrowser extends React.Component {
 
 
     render(){
+        console.log('rendered');
         return(
             <div className="Browser">
                 <Icons>

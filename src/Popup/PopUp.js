@@ -22,14 +22,16 @@ export class PopUp extends React.Component{
             width: '300px',
             backgroundColor: '#BFBFBF',
             position: 'absolute',
-            left: '20%'
+            left: '35%',
+            top: '25%',
+            textAlign: 'center'
         };
         const classes = ["Window"];
         return(
             <div style={popUpStyle} className={classes}>
                 <div className="TopBar">
                     <div className="windowIcon"> </div>
-                    <div className="Title">{this.props.instance.title}</div>
+                    <div className="Title">{this.props.name}</div>
                     <div className="ActionButtons">
                         <div onClick={this.close} className="barButton" id="X">⨯</div>
                     </div>

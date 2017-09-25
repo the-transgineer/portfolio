@@ -2,10 +2,27 @@ import React from 'react';
 import './RightMenuOptions.css';
 
 export class RightMenuOptions extends React.Component{
+    constructor(props){
+        super(props);
 
+        this.state = {
+            input: ''
+        }
+    }
+
+    handleEvent = e => {
+      this.setState({
+          input: e.target.value
+      })
+    };
+
+    handleSubmit = e => {
+        e.preventDefault();
+        this.props.controller.rename(this.props.name, this.state.input);
+        this.props.controller.Popups = [];
+    };
     handleClick = e => {
         let input = e.target.textContent;
-        console.log(input);
         switch(input){
             case 'Open':{
                 this.props.controller.toggleVisible(this.props.name);
@@ -14,7 +31,15 @@ export class RightMenuOptions extends React.Component{
             }
 
             case 'Rename':{
-                this.props.controller.rename(this.props.name, 'NewName');
+                this.props.controller.addPop('Change Name',
+                    <div>
+                        <form>
+                            <label htmlFor="name">New Name</label>
+                            <input onChange={this.handleEvent} type="text" name="name"/>
+                            <button type="submit" onClick={this.handleSubmit} className="button">Submit</button>
+                        </form>
+                    </div>
+                    );
                 break;
             }
 

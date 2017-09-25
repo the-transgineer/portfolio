@@ -81,7 +81,7 @@ export class Desktop extends React.Component{
                 })}
 
                 {this.props.controller.Popups.map((item, index) => {
-                    return <PopUp key={index} name={item.name} controller={this.props.controller}>
+                    return <PopUp visible={true} key={index} name={item.name} controller={this.props.controller}>
                         {item.content}
                     </PopUp>
                 })}
