@@ -15,6 +15,10 @@ export class Taskbar extends Component {
         }
     }
 
+    click = () =>{
+        this.props.controller.hideRight();
+    };
+
     handleRightClick = e => {
         e.preventDefault();
         
@@ -23,8 +27,8 @@ export class Taskbar extends Component {
     render() {
         console.log('rendered');
         return (
-            <div onContextMenu={this.handleRightClick} className="Taskbar">
-                <Menu  />
+            <div onClick={this.click} onContextMenu={this.handleRightClick} className="Taskbar">
+                <Menu visible={this.props.RightMenu} controller={this.props.controller} />
                 <TaskItemList controller={this.props.controller}/>
                 <Tasks/>
             </div>

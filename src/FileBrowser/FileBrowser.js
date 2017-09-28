@@ -7,14 +7,26 @@ export class  FileBrowser extends React.Component {
     constructor(props){
         super(props);
 
+        let Programs = this.props.controller.Programs.filter((item) =>{
+            if(item.parent === this.props.name){
+                return item;
+            }
+        });
+
+        this.state = {
+            Programs: Programs
+        }
+
     }
 
-
+    onHover = () =>{
+        this.setState(this.state)
+    };
     render(){
         return(
-            <div className="Browser">
+            <div onMouseEnter={this.onHover} className="Browser">
                 <Icons>
-                    {this.props.controller.Programs.map((item, index) =>{
+                    {this.state.Programs.map((item, index) =>{
                         if(item.parent === this.props.name){
                             return (<Icon color="black" key={index} controller={this.props.controller} name={item.name} imgae={item.image} />);
                         }

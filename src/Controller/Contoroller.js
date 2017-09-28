@@ -1,5 +1,6 @@
 import {Programs} from './Objects';
 import React from 'react';
+import {Desktop} from "../Desktop/Desktop";
 
 
 export class Controller {
@@ -7,15 +8,15 @@ export class Controller {
         this.Programs = Programs;
         this.Popups = [];
         this.DesktopBackground = '#008483';
-        /*this.startVisible = false;
-        this.rightVisible = false;*/
+        this.startVisible = false;
+        this.rightVisible = false;
     }
 
     getAll() {
         return this.Programs;
     }
 
-    /*showStart()  {
+    showStart()  {
         this.startVisible = true;
     }
 
@@ -29,7 +30,7 @@ export class Controller {
 
     hideRight(){
         this.rightVisible = false;
-    }*/
+    }
 
     getOne(name) {
         for (let i = 0; i < this.Programs.length; i++) {

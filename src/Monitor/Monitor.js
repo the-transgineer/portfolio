@@ -13,25 +13,21 @@ class Monitor extends Component {
         this.props.controller.getOne('Portfolio').content = <FileBrowser name='Portfolio' controller={this.props.controller}/>;
 
         this.state = {
-            rightMenu: false,
-            startMenu: false
+            rightMenu: this.props.controller.rightVisible,
+            startMenu: this.props.controller.startVisible
         }
     }
 
 
     handleClick = () =>{
-        this.setState({
-            rightMenu: false,
-            startMenu: false
-        });
-
+        this.setState(this.state);
     };
 
     render() {
         return (
             <div onClick={this.handleClick} className="Monitor">
              <Desktop controller={this.props.controller} />
-             <Taskbar controller={this.props.controller} />
+             <Taskbar controller={this.props.controller} RightMenu={this.state.rightMenu}/>
             </div>
         );
     }

@@ -21,6 +21,8 @@ export class Desktop extends React.Component{
     }
 
     showMenu = (e) =>{
+        this.props.controller.hideStart();
+        console.log(this.props.controller);
         const id = e.target.getAttribute('id');
         switch (id){
             case 'IconTitle':
@@ -40,12 +42,16 @@ export class Desktop extends React.Component{
             displayMenuX: `${e.clientX - 510 }px`,
             displayMenuY: `${e.clientY - 50}px`
         });
+        this.props.controller.showRight();
+        console.log(this.props.controller.rightVisible);
     };
 
     handleClick = () =>{
         this.setState({
             displayMenu: false
-        })
+        });
+        this.props.controller.hideStart();
+        this.props.controller.hideRight();
     };
 
 
@@ -85,7 +91,7 @@ export class Desktop extends React.Component{
                         {item.content}
                     </PopUp>
                 })}
-                <RightMenu content={this.state.displayMenuContent} controller={this.props.controller} info={this.state.displayMenuInfo} changeColor={this.childHandleClick} visible={this.state.displayMenu} style={menuStyle} />
+                <RightMenu content={this.state.displayMenuContent} controller={this.props.controller} info={this.state.displayMenuInfo} changeColor={this.childHandleClick} visible={this.props.controller.rightVisible} style={menuStyle} />
             </div>
         );
     }
