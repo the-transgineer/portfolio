@@ -50,7 +50,6 @@ export class Window extends React.Component{
         };
 
         const classes = ['Window'];
-        console.log('rendered');
         return (
             <div style={windowStyle} className={classes}>
                 <div className="TopBar">

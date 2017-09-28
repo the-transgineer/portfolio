@@ -1,0 +1,19 @@
+.StartMenuOption{
+    background-color: #BFBFBF;
+    width: inherit;
+    height: 60px;
+    border: solid #BFBFBF 1px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: 15px 10px;
+    background-size: 20%;
+}
+
+.StartMenuOption:hover {
+    background-color: #001CA2;
+    color: white;
+}
+
+.StartMenuOption p{
+    font-size: 20px;
+}

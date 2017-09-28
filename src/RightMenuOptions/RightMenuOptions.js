@@ -19,7 +19,7 @@ export class RightMenuOptions extends React.Component{
     handleSubmit = e => {
         e.preventDefault();
         this.props.controller.rename(this.props.name, this.state.input);
-        this.props.controller.Popups = [];
+        this.props.controller.Popups = this.props.controller.Popups.slice(1)
     };
     handleClick = e => {
         let input = e.target.textContent;

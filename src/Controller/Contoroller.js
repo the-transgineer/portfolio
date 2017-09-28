@@ -7,12 +7,29 @@ export class Controller {
         this.Programs = Programs;
         this.Popups = [];
         this.DesktopBackground = '#008483';
-        console.log(this.Popups);
+        /*this.startVisible = false;
+        this.rightVisible = false;*/
     }
 
     getAll() {
         return this.Programs;
     }
+
+    /*showStart()  {
+        this.startVisible = true;
+    }
+
+    hideStart() {
+        this.startVisible = false;
+    }
+
+    showRight(){
+        this.rightVisible = true;
+    }
+
+    hideRight(){
+        this.rightVisible = false;
+    }*/
 
     getOne(name) {
         for (let i = 0; i < this.Programs.length; i++) {
@@ -33,7 +50,7 @@ export class Controller {
 
     rename(name, newName){
         if(this.getOne(newName)){
-            this.addPop('Error', <p style={{marginTop: '10px'}}> Name Already Exists</p>);
+            this.addPop('Error', <div><p style={{marginTop: '10px'}}> Name Already Exists</p></div>);
         }
         else{
             this.getOne(name).name = newName;
@@ -49,7 +66,7 @@ export class Controller {
         }
     }
 
-    addPop(name,content, visible=false){
-        this.Popups.push({name: name, content: content, visible: visible})
+    addPop(name,content){
+        this.Popups.push({name: name, content: content})
     }
 }

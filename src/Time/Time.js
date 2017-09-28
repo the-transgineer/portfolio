@@ -21,7 +21,7 @@ export class Time extends React.Component {
     updateClock(){
         const currentTime = new Date();
         this.setState({
-            hours: currentTime.getHours() > 12 ? currentTime.getHours() -12 : currentTime.getHours(),
+            hours: currentTime.getHours() > 12 ? currentTime.getHours() - 12 : currentTime.getHours(),
             minutes: currentTime.getMinutes(),
             ampm : currentTime.getHours() >= 12 ? 'pm' : 'am'
         }, this.setTimer);

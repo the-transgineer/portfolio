@@ -27,7 +27,7 @@ export class RightMenu extends React.Component{
         return (
           <div style={this.props.style} className={classes}>
               <ul style={ulStyle} className={classes[1]}>
-                  {this.props.content.map( (item,index) =>  <RightMenuOptions controller={this.props.controller} name={this.props.info} title={item}/>)}
+                  {this.props.content.map( (item,index) =>  <RightMenuOptions key={index} controller={this.props.controller} name={this.props.info} title={item}/>)}
               </ul>
           </div>
         );

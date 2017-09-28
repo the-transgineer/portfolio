@@ -21,9 +21,10 @@ export class Taskbar extends Component {
     };
 
     render() {
+        console.log('rendered');
         return (
             <div onContextMenu={this.handleRightClick} className="Taskbar">
-                <Menu/>
+                <Menu  />
                 <TaskItemList controller={this.props.controller}/>
                 <Tasks/>
             </div>

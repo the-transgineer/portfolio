@@ -5,7 +5,7 @@ export class PopUp extends React.Component{
         super(props);
 
         this.state = {
-            visible: this.props.visible
+            visible: true
         }
     }
 

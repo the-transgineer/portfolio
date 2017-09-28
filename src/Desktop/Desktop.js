@@ -5,6 +5,7 @@ import {Window} from "../Window/Window";
 import {Icons} from "../Icons/Icons";
 import {Icon} from "../Icon/Icon";
 import {PopUp} from "../Popup/PopUp";
+import {CMD} from "../CMD/CMD";
 
 export class Desktop extends React.Component{
     constructor(props){
