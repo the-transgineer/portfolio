@@ -13,8 +13,14 @@ export class  FileBrowser extends React.Component {
             }
         });
 
+        let newArray  = [];
+
+        for(let x = 0; x < Programs.length;x+=2){
+            newArray.push(Programs.slice(x,x+2))
+        }
+
         this.state = {
-            Programs: Programs
+            Programs: newArray
         }
 
     }
@@ -25,14 +31,19 @@ export class  FileBrowser extends React.Component {
     render(){
         return(
             <div onMouseEnter={this.onHover} className="Browser">
-                <Icons>
-                    {this.state.Programs.map((item, index) =>{
-                        if(item.parent === this.props.name){
-                            return (<Icon color="black" key={index} controller={this.props.controller} name={item.name} imgae={item.image} />);
-                        }
+                    {this.state.Programs.map((i, index) =>{
+                        return (
+                            <Icons row={index}>
+                                {    i.map((item,j)=>{
+                                    if(item.parent === this.props.name){
+                                        return (<Icon color="black" key={`${index} + ${j}`} controller={this.props.controller} name={item.name} imgae={item.image} />);
+                                    }
+                                })}
+                            </Icons>
+                            );
                     })}
-                </Icons>
             </div>
         );
     }
 }
+

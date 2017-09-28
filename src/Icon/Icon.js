@@ -5,11 +5,17 @@ import {Game} from "../Games/TicTacToe/Game";
 export class Icon extends React.Component{
 
     handleClick = () =>{
+        if(this.props.controller.getOne(this.props.name).parent === 'Portfolio'){
+             window.open(this.props.controller.getOne(this.props.name).url, '_blank');
+             return;
+        }
+
         if(!this.props.controller.getOne(this.props.name).visible){
             this.props.controller.toggleVisible(this.props.name);
             this.props.controller.toggleMax(this.props.name);
             return null;
         }
+
 
     };
 

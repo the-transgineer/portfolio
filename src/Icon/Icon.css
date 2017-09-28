@@ -7,8 +7,11 @@
     color: white;
     list-style-type: none;
     margin-bottom: 48px;
+    display: inline-block;
+    flex-grow: 1;
+    flex-basis: 100%;
 }
 
 .Icon p{
-    padding-top: 64px;
+    padding-top: 48px;
 }

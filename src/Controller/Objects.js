@@ -55,19 +55,22 @@ export const Programs = [
     {
         name: 'Community App',
         image: 'BC',
-        parent: 'Portfolio'
+        parent: 'Portfolio',
+        url: 'http://bc-community-app.herokuapp.com'
     },
 
     {
         name: 'Safe Night',
         image: 'SN',
-        parent: 'Portfolio'
+        parent: 'Portfolio',
+        url: 'http://safe-night.herokuapp.com'
     },
 
     {
         name: 'Old Portfolio',
         image: 'Fist',
-        parent: 'Portfolio'
+        parent: 'Portfolio',
+        url: 'http://solidaritydesigns.com'
 
     }
 ];
