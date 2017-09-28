@@ -1,5 +1,12 @@
+@font-face {
+    font-family: 'WinNF';
+    src: url('./FreePixel.ttf') format('truetype');
+}
+
 body{
     background-image: url("/wallpaper.jpg");
     background-repeat: no-repeat;
     cursor: url("../Monitor/cursor.cur"),auto;
+    font-family: 'WinNF';
 }
+
