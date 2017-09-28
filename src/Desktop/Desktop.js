@@ -15,7 +15,7 @@ export class Desktop extends React.Component{
             displayMenu     : false,
             displayMenuX    : 0,
             displayMenuY    : 0,
-            displayMenuContent: ['test', 'test'],
+            displayMenuContent: [],
             displayMenuInfo : ''
         }
     }

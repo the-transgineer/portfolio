@@ -31,7 +31,7 @@ export class Menu extends Component{
         let menuClasses = ["Menu"];
         return (
             <div>
-                <Start visible={this.props.controller.startVisible}/>
+                <Start controller={this.props.controller} visible={this.props.controller.startVisible}/>
                 <div onClick={ this.showStart } className={menuClasses}>
                     <img src="" alt=""/>
                     Start

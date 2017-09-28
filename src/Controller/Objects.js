@@ -15,19 +15,10 @@ export const Programs = [
     {
         name: 'Tic Tac Toe',
         image: 'computer',
-        desktop: true,
-        visible: false,
-        minimized: false,
-        content: ''
-    },
-
-    {
-        name: 'Change Color',
-        image: 'file_eye',
         desktop: false,
         visible: false,
         minimized: false,
-        parent: 'Portfolio',
+        parent: 'Games',
         content: ''
     },
 
@@ -39,5 +30,37 @@ export const Programs = [
         minimized: false,
         fileBrowser: true,
         parent: 'none'
+    },
+
+    {
+        name: 'Command',
+        image: 'console_prompt',
+        desktop: false,
+        visible: false,
+        minimized: false,
+        fileBrowser: false,
+        parent: 'none'
+    },
+
+    {
+        name: 'Games',
+        image: 'joystick',
+        desktop: false,
+        visible: false,
+        minimized: false,
+        fileBrowser: true,
+        parent: 'none'
+    },
+
+    {
+        name: 'Community App',
+        image: 'BC',
+        parent: 'Portfolio'
+    },
+
+    {
+        name: 'Safe Night',
+        image: 'SN',
+        parent: 'Portfolio'
     }
 ];

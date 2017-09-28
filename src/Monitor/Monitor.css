@@ -5,9 +5,15 @@
     margin-right: auto;
     left: 0;
     right: 0;
-    top: 5%;
     -webkit-font-smoothing : none;
     cursor: url('./cursor.cur'), auto;
     position: absolute;
     z-index: 990;
+    border-top: 30px;
+    border-right: 70px;
+    border-bottom: 40px;
+    border-left: 70px;
+    border-style: ridge;
+    border-color: #D5CCB2;
+    border-radius: 10px;
 }
