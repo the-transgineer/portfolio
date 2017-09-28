@@ -12,10 +12,18 @@ class Monitor extends Component {
         this.props.controller.getOne('Tic Tac Toe').content = <Game controller={this.props.controller}/>;
         this.props.controller.getOne('Portfolio').content = <FileBrowser name='Portfolio' controller={this.props.controller}/>;
 
+        this.state = {
+            rightMenu: false,
+            startMenu: false
+        }
     }
 
+
     handleClick = () =>{
-        /*this.props.controller.hideStart();*/
+        this.setState({
+            rightMenu: false,
+            startMenu: false
+        });
 
     };
 

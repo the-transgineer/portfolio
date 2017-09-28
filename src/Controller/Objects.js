@@ -39,10 +39,5 @@ export const Programs = [
         minimized: false,
         fileBrowser: true,
         parent: 'none'
-    },
-
-    {
-        name: 'About Me',
-        image: ''
     }
 ];
