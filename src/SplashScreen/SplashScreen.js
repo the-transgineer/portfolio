@@ -22,6 +22,10 @@ export class SplashScreen extends React.Component{
         setTimeout(this.hide.bind(this), 2000);
     }
 
+    rightClick = e => {
+        e.preventDefault();
+    };
+
 
     render(){
 
@@ -32,7 +36,7 @@ export class SplashScreen extends React.Component{
         }
 
         return(
-            <div className={splashScreenClasses}>
+            <div onContextMenu={this.rightClick} className={splashScreenClasses}>
 
             </div>
         );

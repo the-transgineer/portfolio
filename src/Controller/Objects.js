@@ -1,4 +1,5 @@
 import React from 'react';
+import {CMD} from "../CMD/CMD";
 
 export const Programs = [
 
@@ -14,7 +15,7 @@ export const Programs = [
 
     {
         name: 'Tic Tac Toe',
-        image: 'computer',
+        image: 'X',
         desktop: false,
         visible: false,
         minimized: false,
@@ -39,7 +40,8 @@ export const Programs = [
         visible: false,
         minimized: false,
         fileBrowser: false,
-        parent: 'none'
+        parent: 'none',
+        content: <CMD/>
     },
 
     {

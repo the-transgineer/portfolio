@@ -12,9 +12,14 @@ class App extends Component {
             controller: controller
         };
     }
+
+    handleRight = e => {
+        e.preventDefault();
+    };
+
   render() {
     return (
-      <div className="App">
+      <div on onContextMenu={this.handleRight} className="App">
         <SplashScreen/>
         <Monitor controller={this.state.controller}/>
       </div>
