@@ -24,6 +24,7 @@ export class Window extends React.Component{
     };
 
     changeSize = () => {
+        console.log('changed size');
         this.setState({
             position: this.state.maximised ? '25%' : '0%',
             maximised: !this.state.maximised

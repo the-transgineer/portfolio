@@ -1,5 +1,6 @@
 import React from 'react';
 import {CMD} from "../CMD/CMD";
+import {Blog} from "../Blog/Blog";
 
 export const Programs = [
 
@@ -52,6 +53,16 @@ export const Programs = [
         minimized: false,
         fileBrowser: true,
         parent: 'none'
+    },
+
+    {
+        name: 'Blog',
+        image:'msie1',
+        desktop: true,
+        visible: false,
+        minimized: false,
+        content: <Blog/>
+
     },
 
     {
