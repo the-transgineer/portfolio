@@ -1,6 +1,6 @@
 import {Programs} from './Objects';
 import React from 'react';
-import request from 'request-promise';
+import request from 'request';
 
 export class Controller {
     constructor() {
@@ -9,10 +9,11 @@ export class Controller {
         this.DesktopBackground = '#008483';
         this.startVisible = false;
         this.rightVisible = false;
-        request.get('http://transgineering-blog.herokuapp.com/')
-            .then(res => {
-                if(res){console.log('pinged blog server')}
-            })
+        request.get('http://transgineering-blog.herokuapp.com/', (err, res, body) => {
+            console.log(err);
+            console.log(res);
+            console.log(body);
+        });
     }
 
     getAll() {
