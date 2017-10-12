@@ -15,8 +15,8 @@ export class  FileBrowser extends React.Component {
 
         let newArray  = [];
 
-        for(let x = 0; x < Programs.length;x+=2){
-            newArray.push(Programs.slice(x,x+2))
+        for(let x = 0; x < Programs.length;x+=3){
+            newArray.push(Programs.slice(x,x+3))
         }
 
         this.state = {

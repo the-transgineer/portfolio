@@ -12,6 +12,7 @@ class Monitor extends Component {
         this.props.controller.getOne('Tic Tac Toe').content = <Game controller={this.props.controller}/>;
         this.props.controller.getOne('Portfolio').content = <FileBrowser name='Portfolio' controller={this.props.controller}/>;
         this.props.controller.getOne('Games').content = <FileBrowser name='Games' controller={this.props.controller}/>;
+        this.props.controller.getOne('My Computer').content = <FileBrowser name="My Computer" controller={this.props.controller}/>;
         this.state = {
             rightMenu: this.props.controller.rightVisible,
             startMenu: this.props.controller.startVisible

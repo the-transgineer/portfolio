@@ -49,7 +49,8 @@ export class Window extends React.Component{
         let image = {
             backgroundImage: `url(/Icons/${this.props.controller.getOne(this.props.name).image}.ico)`
         };
-
+        console.log(this.props.controller.getOne(this.props.name).fileBrowser);
+        console.log(this.props.name);
         const classes = ['Window'];
         return (
             <div style={windowStyle} className={classes}>

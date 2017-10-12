@@ -73,13 +73,4 @@ export class Controller {
     addPop(name,content){
         this.Popups.push({name: name, content: content})
     }
-
-    deletePop(name){
-        for(let x = 0; x < this.Popups.length; x++){
-            if(Programs[x].name === name){
-                this.Popups= this.Popups.slice(0,x).concat(this.Popups.slice(x+1));
-                return;
-            }
-        }
-    }
 }

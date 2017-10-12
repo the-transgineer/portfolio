@@ -10,7 +10,8 @@ export const Programs = [
         desktop: true,
         visible: false,
         minimized: false,
-        content: <h1>Hello World</h1>
+        content: null,
+        fileBrowser: true
     },
 
 
@@ -31,7 +32,7 @@ export const Programs = [
         visible: false,
         minimized: false,
         fileBrowser: true,
-        parent: 'none'
+        parent: null
     },
 
     {
@@ -41,7 +42,7 @@ export const Programs = [
         visible: false,
         minimized: false,
         fileBrowser: false,
-        parent: 'none',
+        parent: null,
         content: <CMD/>
     },
 
@@ -52,7 +53,7 @@ export const Programs = [
         visible: false,
         minimized: false,
         fileBrowser: true,
-        parent: 'none'
+        parent: null
     },
 
     {
@@ -78,6 +79,12 @@ export const Programs = [
         parent: 'Portfolio',
         url: 'http://safe-night.herokuapp.com'
     },
+    {
+        name: 'Picture App',
+        image: 'BC',
+        parent: 'Portfolio',
+        url: 'https://bc-picture-app.herokuapp.com'
+    },
 
     {
         name: 'Old Portfolio',
@@ -88,9 +95,33 @@ export const Programs = [
     },
 
     {
-        name: 'Picture App',
-        image: 'BC',
-        parent: 'Portfolio',
-        url: 'https://bc-picture-app.herokuapp.com'
+        name: 'Github',
+        image: 'gh',
+        parent: 'My Computer',
+        url: 'https://github.com/the-transgineer'
+    },
+    {
+        name: 'Linkedin',
+        image: 'link',
+        parent: 'My Computer',
+        url: 'https://linkedin.com/in/mckinley-forbes'
+    },
+    {
+        name: 'Twitter',
+        image: 'twitter',
+        parent: 'My Computer',
+        url: 'https://twitter.com/Transgineering'
+    },
+    {
+        name: 'Instagram',
+        image: 'insta',
+        parent: 'My Computer',
+        url: 'https://www.instagram.com/aragothofdagobah/'
+    },
+    {
+        name: 'Facebook',
+        image: 'face',
+        parent: 'My Computer',
+        url: 'https://www.facebook.com/caleb.forbes.148'
     }
 ];

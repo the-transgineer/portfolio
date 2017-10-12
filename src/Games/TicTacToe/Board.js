@@ -41,7 +41,8 @@ export class Board extends React.Component{
     reset = () =>{
         this.props.controller.Popups = [];
         this.setState({
-            squares: new Array(9).fill(null)
+            squares: new Array(9).fill(null),
+            xTurn: true
         });
     };
 
