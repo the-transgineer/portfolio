@@ -16,7 +16,7 @@ export class Blog extends React.Component {
     }
 
     componentDidMount() {
-        request.get('http://transgineering-blog.herokuapp.com/api/articles', (err,res,body) => {
+        request.get('https://transgineering-blog.herokuapp.com/api/articles', (err,res,body) => {
             console.log(err);
             console.log(res);
             const data = JSON.parse(body);

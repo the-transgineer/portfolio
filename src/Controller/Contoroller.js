@@ -9,7 +9,7 @@ export class Controller {
         this.DesktopBackground = '#008483';
         this.startVisible = false;
         this.rightVisible = false;
-        request.get('http://transgineering-blog.herokuapp.com/', (err, res, body) => {
+        request.get('https://transgineering-blog.herokuapp.com/', (err, res, body) => {
             console.log(err);
             console.log(res);
             console.log(body);
