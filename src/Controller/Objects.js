@@ -93,6 +93,13 @@ export const Programs = [
         url: 'http://solidaritydesigns.com'
 
     },
+    {
+      name: 'BC API Toolbox',
+      image: 'npm',
+      parent: 'Portfolio',
+      url: 'https://npmjs.com/bc-api-toolbox'
+
+    },
 
     {
         name: 'Github',
