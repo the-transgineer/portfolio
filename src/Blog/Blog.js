@@ -1,7 +1,6 @@
 import React from 'react';
 import './Blog.css';
-import axios from 'axios';
-
+import request from 'request';
 export class Blog extends React.Component {
     constructor(props){
         super(props);
@@ -17,13 +16,14 @@ export class Blog extends React.Component {
     }
 
     componentDidMount() {
-        axios.get('http://transgineering-blog.herokuapp.com/api/articles')
-            .then(res => {
-                const articles = res.data.map(item => item);
-                this.setState({
-                    articles: articles
-                });
-            })
+        request.get('http://transgineering-blog.herokuapp.com/api/articles', (err,res,body) => {
+            const data = JSON.parse(body);
+            const articles = data.map(item => item);
+            this.setState({
+                articles: articles
+            });
+        })
+
     }
 
 

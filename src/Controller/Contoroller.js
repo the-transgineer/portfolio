@@ -1,6 +1,6 @@
 import {Programs} from './Objects';
 import React from 'react';
-import axios from 'axios';
+import request from 'request-promise';
 
 export class Controller {
     constructor() {
@@ -9,7 +9,7 @@ export class Controller {
         this.DesktopBackground = '#008483';
         this.startVisible = false;
         this.rightVisible = false;
-        axios.get('http://transgineering-blog.herokuapp.com/')
+        request.get('http://transgineering-blog.herokuapp.com/')
             .then(res => {
                 if(res){console.log('pinged blog server')}
             })
