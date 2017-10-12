@@ -9,6 +9,10 @@ export class Icon extends React.Component{
              window.open(this.props.controller.getOne(this.props.name).url, '_blank');
              return;
         }
+        else if(this.props.controller.getOne(this.props.name).parent){
+            let parent = this.props.controller.getOne(this.props.name).parent;
+            this.props.controller.toggleMax(parent);
+        }
 
         if(!this.props.controller.getOne(this.props.name).visible){
             this.props.controller.toggleVisible(this.props.name);

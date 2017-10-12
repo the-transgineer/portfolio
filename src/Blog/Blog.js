@@ -19,7 +19,7 @@ export class Blog extends React.Component {
     componentDidMount() {
         axios.get('http://transgineering-blog.herokuapp.com/api/articles')
             .then(res => {
-                const articles = res.data.map(item => item.title);
+                const articles = res.data.map(item => item);
                 this.setState({
                     articles: articles
                 });
@@ -37,6 +37,10 @@ export class Blog extends React.Component {
                 </div>
                 <div className="content">
                     <div className="blogTitle">The Transgineer</div>
+                    {this.state.articles.map((item, index) => {
+                        console.log(item);
+                        return <a key={index} target="_blank" href={`http://transgineering-blog.herokuapp.com/post/${item._id}`}><li>{item.title}</li></a>
+                    })}
                 </div>
             </div>
         );

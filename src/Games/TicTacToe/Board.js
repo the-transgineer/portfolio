@@ -39,14 +39,16 @@ export class Board extends React.Component{
     }
 
     reset = () =>{
+        this.props.controller.Popups = [];
         this.setState({
             squares: new Array(9).fill(null)
-        })
+        });
     };
 
     close = () => {
         this.props.controller.toggleVisible('Tic Tac Toe');
         this.props.controller.toggleMax('Tic Tac Toe');
+        this.props.controller.toggleMax('Games');
         this.props.controller.Popups = [];
     };
 

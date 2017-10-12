@@ -85,5 +85,12 @@ export const Programs = [
         parent: 'Portfolio',
         url: 'http://solidaritydesigns.com'
 
+    },
+
+    {
+        name: 'Picture App',
+        image: 'BC',
+        parent: 'Portfolio',
+        url: 'https://bc-picture-app.herokuapp.com'
     }
 ];
