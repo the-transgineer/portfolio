@@ -123,7 +123,7 @@ export const Programs = [
         name: 'Instagram',
         image: 'insta',
         parent: 'My Computer',
-        url: 'https://www.instagram.com/aragothofdagobah/'
+        url: 'https://www.instagram.com/TheTransgineer/'
     },
     {
         name: 'Facebook',
