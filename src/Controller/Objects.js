@@ -1,6 +1,7 @@
 import React from 'react';
 import {CMD} from "../CMD/CMD";
 import {Blog} from "../Blog/Blog";
+import {ColorChanger} from "../ColorChanger/ColorChanger";
 
 export const Programs = [
 
@@ -64,6 +65,13 @@ export const Programs = [
         minimized: false,
         content: <Blog/>
 
+    },
+    {
+        name: 'Change Color',
+        image: 'kodak_imaging',
+        visible: false,
+        minimized: false,
+        content: ''
     },
 
     {

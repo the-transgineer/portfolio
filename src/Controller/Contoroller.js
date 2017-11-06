@@ -74,4 +74,8 @@ export class Controller {
     addPop(name,content){
         this.Popups.push({name: name, content: content})
     }
+
+    changeColor(color){
+        this.DesktopBackground = color;
+    }
 }

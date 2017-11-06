@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import './Monitor.css';
+import './Monitor.css'
 import {Taskbar} from "../Taskbar/Taskbar";
 import {Desktop} from "../Desktop/Desktop";
 import {Game} from "../Games/TicTacToe/Game"
 import {FileBrowser} from "../FileBrowser/FileBrowser";
+import {ColorChanger} from "../ColorChanger/ColorChanger";
 
 class Monitor extends Component {
     constructor(props){
@@ -13,6 +14,7 @@ class Monitor extends Component {
         this.props.controller.getOne('Portfolio').content = <FileBrowser name='Portfolio' controller={this.props.controller}/>;
         this.props.controller.getOne('Games').content = <FileBrowser name='Games' controller={this.props.controller}/>;
         this.props.controller.getOne('My Computer').content = <FileBrowser name="My Computer" controller={this.props.controller}/>;
+        this.props.controller.getOne('Change Color').content = <ColorChanger controller={this.props.controller}/>;
         this.state = {
             rightMenu: this.props.controller.rightVisible,
             startMenu: this.props.controller.startVisible

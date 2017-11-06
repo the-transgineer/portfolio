@@ -25,7 +25,8 @@ export class RightMenuOptions extends React.Component{
         let input = e.target.textContent;
         switch(input){
             case 'Change Color':{
-
+                this.props.controller.toggleVisible(input);
+                this.props.controller.toggleMax(input);
                 break;
             }
             case 'Open':{

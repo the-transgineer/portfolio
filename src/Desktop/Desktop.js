@@ -33,7 +33,7 @@ export class Desktop extends React.Component{
                 break;
             default:
                 this.setState({
-                    displayMenuContent:['Change Color', 'Add New']
+                    displayMenuContent:['Change Color']
                 })
         }
         e.preventDefault();
