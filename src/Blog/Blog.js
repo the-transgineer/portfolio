@@ -16,7 +16,7 @@ export class Blog extends React.Component {
     }
 
     componentDidMount() {
-        request.get('https://transgineering-blog.herokuapp.com/api/articles', (err,res,body) => {
+        request.get('http://blog.transgineer.com/api/articles', (err,res,body) => {
             console.log(err);
             console.log(res);
             const data = JSON.parse(body);
@@ -42,7 +42,7 @@ export class Blog extends React.Component {
                     <div className="blogTitle">The Transgineer</div>
                     {this.state.articles.map((item, index) => {
                         console.log(item);
-                        return <a key={index} target="_blank" href={`http://transgineering-blog.herokuapp.com/post/${item._id}`}><li>{item.title}</li></a>
+                        return <a key={index} target="_blank" href={`http://blog.transgineer.com/post/${item._id}`}><li>{item.title}</li></a>
                     })}
                 </div>
             </div>
