@@ -41,7 +41,6 @@ export class Blog extends React.Component {
                 <div className="content">
                     <div className="blogTitle">The Transgineer</div>
                     {this.state.articles.map((item, index) => {
-                        console.log(item);
                         return <a key={index} target="_blank" href={`http://blog.transgineer.com/post/${item._id}`}><li>{item.title}</li></a>
                     })}
                 </div>

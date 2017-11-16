@@ -108,6 +108,12 @@ export const Programs = [
       url: 'https://npmjs.com/bc-api-toolbox'
 
     },
+    {
+      name: 'Pantry',
+        image: 'pantry',
+      parent: 'Portfolio',
+      url: 'https://pantry-io.herokuapp.com'
+    },
 
     {
         name: 'Github',
