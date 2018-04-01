@@ -98,7 +98,7 @@ export const Programs = [
         name: 'Old Portfolio',
         image: 'Fist',
         parent: 'Portfolio',
-        url: 'http://solidaritydesigns.com'
+        url: 'http://the-transgineer.github.io/old-portfolio'
 
     },
     {
@@ -107,6 +107,18 @@ export const Programs = [
       parent: 'Portfolio',
       url: 'https://npmjs.com/bc-api-toolbox'
 
+    },
+    {
+      name: 'Transportation Dashboard',
+      image : 'coa',
+      parent: 'Portfolio',
+      url: 'http://transportation-dashboard.herokuapp.com'
+    },
+    {
+      name: 'MapBoard',
+      image: 'npm',
+      parent: 'Portfolio',
+      url: 'https://npmjs.com/mapboard-components'
     },
     {
       name: 'Pantry',
@@ -144,5 +156,5 @@ export const Programs = [
         image: 'face',
         parent: 'My Computer',
         url: 'https://www.facebook.com/caleb.forbes.148'
-    }
+    },
 ];
