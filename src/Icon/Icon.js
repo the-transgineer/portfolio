@@ -4,7 +4,7 @@ import {Game} from "../Games/TicTacToe/Game";
 
 export class Icon extends React.Component{
 
-    handleClick = () =>{
+    handleClick = () => {
         if(this.props.controller.getOne(this.props.name).parent === 'Portfolio'){
              window.open(this.props.controller.getOne(this.props.name).url, '_blank');
              return;
@@ -30,13 +30,13 @@ export class Icon extends React.Component{
     render(){
         const program = this.props.controller.getOne(this.props.name);
         const style = {
-            backgroundImage: `url(/Icons/${program.image}.ico`,
             color: this.props.color ? this.props.color : 'white'
         };
 
 
         return (
-            <li onClick={this.handleClick} className="Icon" style={style}>
+            <li onClick={this.handleClick} style={style} className="Icon-container">
+                <img className="Icon" src={`/Icons/${program.image}.ico`}></img>
                 <p id="IconTitle">{this.props.name}</p>
             </li>
         );
