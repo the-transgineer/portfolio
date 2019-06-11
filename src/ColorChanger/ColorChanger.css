@@ -1,0 +1,14 @@
+.colorPicker {
+    background-color: white;
+    height: 100%;
+}
+
+.colorContainer {
+    position: absolute;
+    left: 20%;
+    top: 20%
+}
+
+.colorContainer button {
+    margin: auto;
+}

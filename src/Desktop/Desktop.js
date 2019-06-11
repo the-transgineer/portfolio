@@ -59,7 +59,7 @@ export class Desktop extends React.Component{
 
     render(){
         let style = {
-            backgroundColor: this.state.backgroundColor
+            backgroundColor: this.props.controller.DesktopBackground
         };
 
         let menuStyle = {
