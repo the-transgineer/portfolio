@@ -10,9 +10,6 @@ export class Controller {
         this.startVisible = false;
         this.rightVisible = false;
         request.get('https://transgineering-blog.herokuapp.com/', (err, res, body) => {
-            console.log(err);
-            console.log(res);
-            console.log(body);
         });
     }
 

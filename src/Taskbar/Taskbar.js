@@ -25,7 +25,6 @@ export class Taskbar extends Component {
     };
 
     render() {
-        console.log('rendered');
         return (
             <div onClick={this.click} onContextMenu={this.handleRightClick} className="Taskbar">
                 <Menu visible={this.props.RightMenu} controller={this.props.controller} />
