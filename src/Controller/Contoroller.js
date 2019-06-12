@@ -9,6 +9,7 @@ export class Controller {
         this.DesktopBackground = '#008483';
         this.startVisible = false;
         this.rightVisible = false;
+        request.get('https://transgineering-blog.herokuapp.com/');
     }
 
     getAll() {

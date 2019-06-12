@@ -24,7 +24,7 @@ export default class ToolTip extends React.Component {
             style.display = "none";
         }
         return (
-            <div style={style} className="ToolTip">
+            <div onClick={this.handleClick} style={style} className="ToolTip">
                 <p>Try Right Clicking Desktop and Icons!</p>
             </div>
         )
