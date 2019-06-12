@@ -1,0 +1,25 @@
+.ToolTip {
+    height: 70px;
+    width: 250px;
+    background-color: whitesmoke;
+    position: absolute;
+    right: 3%;
+    bottom: 130%;
+    text-align: center;
+}
+
+.ToolTip:before {
+    content: "";
+    width: 0;
+    height: 0;
+    right: 22%;
+    top: 55px;
+    position: absolute;
+    border-top: 13px solid transparent;
+    border-right: 26px solid whitesmoke;
+    border-bottom: 13px solid transparent;
+}
+
+.ToolTip p {
+    margin-bottom: 20px;
+}

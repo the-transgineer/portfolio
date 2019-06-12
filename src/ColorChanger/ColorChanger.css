@@ -10,5 +10,7 @@
 }
 
 .colorContainer button {
-    margin: auto;
+    position: absolute;
+    left: 35%;
+    margin-top: 20px;
 }

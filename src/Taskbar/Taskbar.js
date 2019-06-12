@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import './Taskbar.css';
-import {Time} from '../Time/Time'
 import {Menu} from "../Menu/Menu";
 import {Tasks} from "../Tasks/Tasks";
-import {TaskItem} from "../TaskItem/TaskItem";
 import {TaskItemList} from "../TaskItem/TaskItemList";
+import ToolTip from "../ToolTip/ToolTip";
 
 export class Taskbar extends Component {
     constructor(props){
@@ -30,6 +29,7 @@ export class Taskbar extends Component {
                 <Menu visible={this.props.RightMenu} controller={this.props.controller} />
                 <TaskItemList controller={this.props.controller}/>
                 <Tasks/>
+                <ToolTip />
             </div>
         );
     }
