@@ -30,6 +30,12 @@ export class Desktop extends React.Component{
                     displayMenuInfo: e.target.textContent
                 });
                 break;
+            case 'Icon':
+                this.setState({
+                    displayMenuContent:['Open', 'Rename', 'Delete'],
+                    displayMenuInfo: e.target.nextElementSibling.textContent
+                });
+                break;    
             default:
                 this.setState({
                     displayMenuContent:['Change Color']

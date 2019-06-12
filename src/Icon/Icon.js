@@ -35,7 +35,7 @@ export class Icon extends React.Component{
 
         return (
             <li onClick={this.handleClick} style={style} className="Icon-container">
-                <img  id="IconTitle" className="Icon" src={`/Icons/${program.image}.ico`}></img>
+                <img  id="Icon" className="Icon" src={`/Icons/${program.image}.ico`}></img>
                 <p id="IconTitle">{this.props.name}</p>
             </li>
         );

@@ -23,6 +23,7 @@ export class RightMenuOptions extends React.Component{
     };
     handleClick = e => {
         let input = e.target.textContent;
+        console.log(this.props);
         switch(input){
             case 'Change Color':{
                 this.props.controller.toggleVisible(input);
