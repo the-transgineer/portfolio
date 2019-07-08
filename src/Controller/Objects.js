@@ -137,7 +137,7 @@ export const Programs = [
         name: 'Linkedin',
         image: 'link',
         parent: 'My Computer',
-        url: 'https://www.linkedin.com/in/mckinley-forbes-9b2a05181/'
+        url: 'https://www.linkedin.com/in/kinley-forbes'
     },
     {
         name: 'Twitter',
